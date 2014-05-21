@@ -109,3 +109,5 @@ parameters, for example: `smtp://user:pass@localhost/?encryption=tls&auth_mode=p
 Gmail URLs may be specified by leaving the everything after the authentication string out, for example:
 `gmail://user@gmail.com:password`. For mail and sendmail you can use: `mail://` and `mail`, and `sendmail://` and 
 `sendmail` respectively.
+
+[composer]: https://getcomposer.org/
