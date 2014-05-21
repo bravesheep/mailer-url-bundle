@@ -1,0 +1,22 @@
+{
+    "name": "bravesheep/mailer-url-bundle",
+    "description": "Determine Symfony2 mailer settings from a single URL-based parameter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ruben Nijveld",
+            "email": "ruben@gewooniets.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bravesheep\\MailerUrlBundle\\": "src/Bravesheep/MailerUrlBundle/"
+        }
+    },
+    "require": {
+        "symfony/symfony": "~2.3"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.0"
+    }
+}
