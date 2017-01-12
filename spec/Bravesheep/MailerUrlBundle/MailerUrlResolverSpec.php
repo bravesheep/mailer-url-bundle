@@ -36,6 +36,19 @@ class MailerUrlResolverSpec extends ObjectBehavior
         $result['auth_mode']->shouldBe(null);
     }
 
+    function it_should_handle_emailaddress_usernames()
+    {
+        $result = $this->resolve('smtp+tls://user@example.com:password@host');
+
+        $result['transport']->shouldBe('smtp');
+        $result['user']->shouldBe('user@example.com');
+        $result['password']->shouldBe('password');
+        $result['host']->shouldBe('host');
+        $result['port']->shouldBe(false);
+        $result['encryption']->shouldBe('tls');
+        $result['auth_mode']->shouldBe(null);
+    }
+
     function it_should_not_override_parameters_with_query_parameters()
     {
         $result = $this->resolve('smtp+tls://user:pass@host:1234/?encryption=ssl&auth_mode=plain&password=overwritten');
